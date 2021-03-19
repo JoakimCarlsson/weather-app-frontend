@@ -50,6 +50,7 @@ class App extends React.Component {
       <div className="App">
         <Input loadWeather={this.getWeather} error={this.state.error} />
         <Weather icon={this.state.icon} city={this.state.city} country={this.state.country} description={this.state.description} currentTemp={this.state.currentTemp} minTemp={this.state.tempMin} maxTemp={this.state.tempMax} />
+        <WeekContainer/>
       </div>
     );
   }
