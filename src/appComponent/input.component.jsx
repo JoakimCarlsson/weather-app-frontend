@@ -8,7 +8,7 @@ const Form = properties => {
             <form onSubmit={properties.loadWeather}>
                 <div className="row">
                     <div className="col-md-3 offset-md-3">
-                        <input type="text" className="from-control" name="city" autoComplete="off" placeholder="City..." />
+                        <input type="text" className="from-control" name="city" autoComplete="off" placeholder="City" />
                     </div>
                     <div className="col-md-3">
                         <button className="btn btn-warning">Get</button>

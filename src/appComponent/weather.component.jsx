@@ -1,5 +1,4 @@
 import React from 'react';
-import './weather.style.css'
 
 const Weather = (properties) => {
     return (
@@ -13,21 +12,42 @@ const Weather = (properties) => {
                 {getMinMax(properties.minTemp, properties.maxTemp)}
                 <h4 className="py-3">{properties.description}</h4>
             </div>
+            <hr></hr>
         </div>
+        
     );
 }
 
 function getWeatherIcon(icon) {
-    return `http://openweathermap.org/img/wn/${icon}@2x.png`
+    return `https://www.weatherbit.io/static/img/icons/${icon}.png`
 }
 
 function getMinMax(minTemp, maxTemp) {
     return (
-        <h3>
-            <span className="px-4">{minTemp}&deg;</span>
-            <span className="px-4">{maxTemp}&deg;</span>
-        </h3>
+        <div className="row justify-content-center align-self-center">
+            <div>
+                Min
+                <h3>
+                    <span className="px-4">{minTemp}&deg;</span>
+                </h3>
+            </div>
+            <div>
+                Max
+                <h3>
+                    <span className="px-4">{maxTemp}&deg;</span>
+                </h3>
+            </div>
+        </div>
     );
 }
+
+// function getMinMax(minTemp, maxTemp) {
+//     return (
+//         <h3>
+//             <span className="px-4">{minTemp}&deg;</span>
+//             <span className="px-4">{maxTemp}&deg;</span>
+//         </h3>
+//     );
+// }
 
 export default Weather;
