@@ -14,7 +14,6 @@ const Weather = (properties) => {
             </div>
             <hr></hr>
         </div>
-        
     );
 }
 
